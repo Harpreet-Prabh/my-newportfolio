@@ -1,17 +1,23 @@
 export default function Footer() {
   return (
-    <footer className="mt-16 py-6 text-center text-gray-600 border-t">
-      <p>© {new Date().getFullYear()} Harpreet Kaur. All rights reserved.</p>
+    <footer className="bg-gray-800 text-white py-4 text-center rounded-lg shadow-lg">
+      <p>&copy; 2023 Your Name. All rights reserved.</p>
       <div className="flex justify-center space-x-4 mt-2">
         <a
-          href="https://github.com/harpreetkaur"
-          className="hover:text-blue-600"
+          href="#"
+          className="hover:text-green-400 transition duration-300 ease-in-out"
         >
-          GitHub
+          Facebook
         </a>
         <a
-          href="https://linkedin.com/in/harpreetkaur"
-          className="hover:text-blue-600"
+          href="#"
+          className="hover:text-green-400 transition duration-300 ease-in-out"
+        >
+          Twitter
+        </a>
+        <a
+          href="#"
+          className="hover:text-green-400 transition duration-300 ease-in-out"
         >
           LinkedIn
         </a>

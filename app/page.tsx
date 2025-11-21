@@ -1,7 +1,3 @@
-import { BorderBeam } from "@/components/ui/border-beam";
-import { IconCloud } from "@/components/ui/icon-cloud";
-import Image from "next/image";
-import Skills from "./skills/page";
 import SkillsIcons from "./components/SkillsIcons";
 import ProfileCard from "./components/ProfileCard";
 

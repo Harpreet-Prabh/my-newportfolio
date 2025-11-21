@@ -1,3 +1,4 @@
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -20,6 +21,9 @@ export default function Navbar() {
           <Link href="/contact" className="hover:text-blue-600">
             Contact
           </Link>
+          <div className=" inline-block align-middle">
+            <AnimatedThemeToggler />
+          </div>
         </div>
       </div>
     </nav>

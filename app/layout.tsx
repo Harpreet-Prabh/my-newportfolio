@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ThemeInit from "../components/ui/theme-init";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-gradient-to-br from-blue-50 to-white text-gray-800`}
-      >
+      <body className={`${inter.className}`}>
+        <ThemeInit />
         <Navbar />
         <main className="min-h-screen px-6 md:px-12 lg:px-24 py-12">
           {children}

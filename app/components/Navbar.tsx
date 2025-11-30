@@ -1,46 +1,67 @@
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
-import Link from "next/link";
+"use client";
 
-export default function Navbar() {
+import Link from "next/link";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+
+const Navbar = () => {
   return (
-    <nav className="w-full bg-gray-800 shadow-md sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-sm">
+      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold text-white dark:text-gray-200"
+          className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600
+                     bg-clip-text text-transparent tracking-wide hover:opacity-80 transition"
         >
-          Harpreet Kaur
+          HK
         </Link>
-        <div className="space-x-6 text-gray-300 font-medium dark:text-gray-400">
+
+        {/* Center Navigation */}
+        <div className="hidden md:flex space-x-10">
+          <Link
+            href="/"
+            className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 
+                       font-medium transition-colors"
+          >
+            Home
+          </Link>
           <Link
             href="/about"
-            className="hover:text-green-400 dark:hover:text-green-300 transition duration-300"
+            className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 
+                       font-medium transition-colors"
           >
             About
           </Link>
           <Link
-            href="/skills"
-            className="hover:text-green-400 dark:hover:text-green-300 transition duration-300"
-          >
-            Skills
-          </Link>
-          <Link
             href="/projects"
-            className="hover:text-green-400 dark:hover:text-green-300 transition duration-300"
+            className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 
+                       font-medium transition-colors"
           >
             Projects
           </Link>
           <Link
+            href="/skills"
+            className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 
+                       font-medium transition-colors"
+          >
+            Skills
+          </Link>
+          <Link
             href="/contact"
-            className="hover:text-green-400 dark:hover:text-green-300 transition duration-300"
+            className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 
+                       font-medium transition-colors"
           >
             Contact
           </Link>
-          <div className=" inline-block align-middle">
-            <AnimatedThemeToggler />
-          </div>
         </div>
-      </div>
-    </nav>
+
+        {/* Theme Switcher */}
+        <div className="flex items-center">
+          <AnimatedThemeToggler />
+        </div>
+      </nav>
+    </header>
   );
-}
+};
+
+export default Navbar;
